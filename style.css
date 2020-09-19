@@ -1,0 +1,124 @@
+
+:root {
+    --green: #83e1d0;
+    --red: #ef7b54;
+    --background: #f8f1e9;
+    --gradient1: #32ab32;
+    --gradient2: #246e24;
+}
+
+html { 
+    font-size: 10px;
+     font-weight: 300;
+    }
+
+body { 
+    width: 90vw;
+    margin: 0 auto;
+    background: radial-gradient(var(--gradient1), var(--gradient2))
+ }
+
+ main {
+     text-align: center;
+     background: var(--background);
+     border: solid #ef7b54;
+     border-width: 0 8px 8px 8px;
+     min-height: 80vh;
+     border-radius: 0 0  3rem 3rem;
+     padding: 1 rem;
+     margin: 0.8rem 0;
+     color: #1f2933;
+ }
+
+ h2 {
+      font-size: 2.2rem;
+       margin: 4rem 0;
+       padding-top: 4rem;
+     }
+
+ p { font-size: 1.8rem }
+
+ .button-wrapper {
+     display: flex;
+     flex-direction: column;
+
+ }
+
+ button { 
+     border: none;
+     cursor: pointer;
+     background-color: var(--green);
+     padding: 2rem;
+     border-radius: 1rem 1rem 0 0;
+ }
+
+ button:last-child {
+     background-color: var(--red);
+     border-radius: 0 0 1rem 1rem;
+ }
+ h3 { font-size: 2rem}
+
+ input[type=number] {
+     border: 1px solid lightgrey;
+     background-color: transparent;
+     margin: 2rem 0;
+     padding: 1.5rem 0;
+     width: 160px;
+     text-align: center;
+ }
+
+ #range {
+     display: flex;
+     background-color: var(--green);
+     height: 5rem;
+     padding:0;
+     margin: 0 0 4rem 0
+ }
+
+ #rangeOutput {
+     font-size: 16px;
+    
+ }
+
+
+
+ .stats {
+     text-align: left;
+     padding: 0 1rem 0 1rem;
+ }
+
+ .info {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .info span {
+     font-size: 16px;
+ }
+
+ #newGameButton {
+     border-radius: 0;
+ }
+
+ .flash {
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+ @media screen and (min-width: 800px) {
+     body {
+         width: 55vw;
+     }
+ }

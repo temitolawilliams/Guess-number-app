@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>guess the number game</title>
+</head>
+<body onload="init()">
+    <main>
+        <div id="welcome-section">
+            <h2>Guess the random number <br> between 1 - 100</h2>
+    
+            <section>
+                <p>Select Difficulty level</p>
+    
+                <div class="button-wrapper">
+                    <button onclick="easyMode()" id="btn-1">Easy: 10 attempts</button>
+                    <button onclick="hardMode()" id="btn-2">Hard: 5 attempts</button>
+                </div>
+            </section>
+        </div>
+    
+    
+        <div id="gameArea">
+            <button id="newGameButton" onclick="newGame()">Play New Game</button>
+            <section>
+                <h3 id="guessOutput">Your Guess:</h3>
+                <input type="number" min="1" max="100" id="inputBox" onchange="compareGuess()">
+            </section>
+            <section>
+                <p>Current Range</p>
+                <span id="rangeOutput">1-100</span>
+                <div id="range">
+                    <span id="low"></span>
+                    <span id="space"></span>
+                    <span id="high"></span>
+                </div>
+            </section>
+            <section class="stats">
+                <div class="info">
+                    <p>Number of previous attempts</p>
+                    <span id="attempts">0</span>
+                </div>
+                <div class="info">
+                    <p>Your previous guesses</p>
+                    <span id="guesses">0</span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="scripo.js"></script>
+</body>
+</html>
